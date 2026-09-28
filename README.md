@@ -49,6 +49,27 @@ python code/26_fig2_headtohead.py    # … through 38; final figure QC iteration
 
 All downstream analyses are CPU-only. Data transfer helpers (`autodl_*.py`, `local_fetch_chunks.sh`, `16/21/23/33_*.py`) are optional infrastructure used for verified downloads from a rented GPU relay; server addresses are placeholders.
 
+## Quick demo (no local data needed)
+
+The attribution step can be tested end-to-end on the SIGnature tutorial data
+(Zenodo record 17905668, ~500 cells):
+
+```bash
+# download tutorial h5ad from https://zenodo.org/records/17905668
+python - <<'PY'
+import scanpy as sc
+from SIGnature.models.scimilarity import SCimilarityWrapper
+adata = sc.read_h5ad("tutorial_dataset.h5ad")
+adata.layers["counts"] = adata.X.copy()
+m = SCimilarityWrapper(model_path="model_files/scimilarity", use_gpu=True)
+t = m.preprocess_adata(adata.copy())
+atts = m.calculate_attributions(t.X, batch_size=100, method="ig")
+print("attribution matrix:", atts.shape)
+PY
+```
+
+This reproduces the core attribution call used at scale by `code/13_phase1_attribution.py`.
+
 ## Data
 
 All input datasets are public (NCBI GEO): GSE173193, GSE290578, GSE298602, GSE298119, GSE282038, GSE329173, GSE240922 (single-cell); GSE25906, GSE306864 (bulk). Attribution helper files: Zenodo 17903196. scFoundation weights: HuggingFace `genbio-ai/scFoundation`.
