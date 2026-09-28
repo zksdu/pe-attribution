@@ -77,3 +77,5 @@ All input datasets are public (NCBI GEO): GSE173193, GSE290578, GSE298602, GSE29
 ## Citation
 
 [Preprint/manuscript reference upon posting]
+
+Versioned archive of this repository: https://doi.org/10.5281/zenodo.23021688
