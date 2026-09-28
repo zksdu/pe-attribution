@@ -1,0 +1,8 @@
+GSE,tissue,groups,QC_cells,role
+GSE173193,placenta,PE 2 / control 2 / GDM 2 / elderly 2,52358,contrast (mixed)
+GSE298119,placenta,term PE 2 / control 1,42248,contrast (LOPE)
+GSE298602,placenta+membranes,severe-PE 3+ / control 3+ / gHTN 3+,58923,contrast (severe)
+GSE290578,placenta MFI+deep,preterm PE 8 / term control 6*,135209,contrast (EOPE proxy)
+GSE282038,placenta,EOPE 1 (pooled),9305,profile
+GSE329173,placenta,severe eclampsia 3,33861,profile
+GSE240922,decidua+villi 7-10w,reference 30,132823,reference

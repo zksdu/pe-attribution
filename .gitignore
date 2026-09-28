@@ -1,0 +1,10 @@
+# 大文件不入库
+*.npz
+*.h5ad
+*.tar.gz
+*.ckpt
+__pycache__/
+*.pyc
+.DS_Store
+# 内部凭据缓存
+.ssh_known_hosts

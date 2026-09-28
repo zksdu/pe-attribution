@@ -1,0 +1,9 @@
+module,subtype,point_biserial_r
+Immune,EOPE,0.249
+Immune,severe,0.209
+Immune,LOPE,-0.306
+Immune,mixed,-0.32
+Trophoblast,EOPE,0.096
+Trophoblast,severe,-0.006
+Trophoblast,LOPE,-0.159
+Trophoblast,mixed,0.272
